@@ -1,0 +1,6 @@
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\obj\Debug\DataStructure.csprojResolveAssemblyReference.cache
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\File_C#\DataStructure\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
