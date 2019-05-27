@@ -8,7 +8,7 @@ namespace ConsoleApplication1
 {
     public class NodeHashtable
     {
-        public int Key {get;set;}
-        public string Value { get; set; }
+        public string Key { get; set; }
+        public int Value { get; set; }
     }
 }

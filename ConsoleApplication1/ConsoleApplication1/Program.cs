@@ -11,17 +11,11 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int[] list = { 5, 1, 4, 2, 8, 7 };
-
-            QueuesADT queues = new QueuesADT(3);
-            QueuesADT.EnqueuesLinkedList(5);
-            
+            Tree.Add(5);
+            Console.WriteLine(Tree.Height());
 
 
 
-
-            Console.WriteLine("Count " + QueuesADT.CountLinkedList());
-            
 
         }
 

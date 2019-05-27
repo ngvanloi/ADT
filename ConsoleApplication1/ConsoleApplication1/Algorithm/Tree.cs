@@ -10,21 +10,21 @@ namespace ConsoleApplication1.DataStructure
     {
         #region Tree 1
        
-        NodeTree Root_Tree1;
-        void Add(int value)
+        public static NodeTree Root_Tree;
+        public static void Add(int value)
         {
             var node = new NodeTree();
             node.Data = value;
-            if (Root_Tree1 == null)
+            if (Root_Tree == null)
             {
-                Root_Tree1 = node;
+                Root_Tree = node;
             }
             else
             {
-                Add(Root_Tree1, node);
+                Add(Root_Tree, node);
             }
         }
-        void Add(NodeTree parent, NodeTree node)
+        public static void Add(NodeTree parent, NodeTree node)
         {
             if (node.Data < parent.Data)
             {
@@ -51,20 +51,19 @@ namespace ConsoleApplication1.DataStructure
         #endregion
 
         #region Tree 2
-        NodeTree Root_Tree2;
-        int Height()
+        public static int Height()
         {
-            if (Root_Tree2 == null)
+            if (Root_Tree == null)
             {
                 return 0;
             }
             else
             {
-                return 1 + Math.Max(Height(Root_Tree2.Left), Height( Root_Tree2.Right));
+                return 1 + Math.Max(Height(Root_Tree.Left), Height( Root_Tree.Right));
             }
         }
 
-        int Height(NodeTree node)
+        public static int Height(NodeTree node)
         {
             if (node == null)
             {

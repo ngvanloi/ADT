@@ -8,47 +8,48 @@ namespace ConsoleApplication1.DataStructure
 {
     public class HashTable
     {
-        NodeHashtable[] table;
-        public HashTable()
+        public static NodeHashtable[] table;
+        public HashTable(int size)
         {
-            table = new NodeHashtable[1000];
+            table = new NodeHashtable[size];
         }
-        private int Hash(int key)
+        public static int Hash(string key)
         {
-            return key.GetHashCode() % 1000;
+            return (key.GetHashCode() % 1000) * -1;
         }
-        void Add(int key, string value)
+        public static void Add(string key, int value)
         {
             int index = Hash(key);
             table[index].Key = key;
             table[index].Value = value;
         }
 
-        string Lookup(int key)
+        public static string Lookup(string key)
         {
             int index = Hash(key);
             if (table[index] != null)
             {
-                return table[index].Value;
+                return table[index].Value.ToString();
             }
             return null;
         }
 
-        void Clear()
+        public static void Clear()
         {
-            NodeHashtable[] table = new NodeHashtable[1000];
+            table = new NodeHashtable[1000];
         }
 
-        int Count()
+        public static int Count()
         {
             int count = 0;
-            for (int i = 0; i < table.Length; i++)
+            foreach (var item in table)
             {
-                if (table[i] != null)
+                if (item.Key != null)
                 {
                     count++;
                 }
             }
+            
             return count;
         }
 

@@ -8,8 +8,8 @@ namespace ConsoleApplication1
 {
     public class NodeTree
     {
-        public int Data;
-        public NodeTree Left;
-        public NodeTree Right;
+        public int Data { get; set; }
+        public NodeTree Left { get; set; }
+        public NodeTree Right { get; set; }
     }
 }

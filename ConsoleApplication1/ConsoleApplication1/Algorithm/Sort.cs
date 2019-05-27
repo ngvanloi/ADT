@@ -18,7 +18,6 @@ namespace ConsoleApplication1
             int temp;
             while (!done)
             {
-
                 done = true;
                 n = n - 1;
                 for (int i = 0; i <= n - 1; i++)
@@ -85,6 +84,7 @@ namespace ConsoleApplication1
                 while ((List[l] < pval) && (l < r))
                     l++;
                 while ((List[r] >= pval) && (l < r))
+
                     r--;
 
                 if (l != r)
