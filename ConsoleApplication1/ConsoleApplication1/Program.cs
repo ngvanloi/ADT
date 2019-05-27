@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApplication1.DataStructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,16 +11,18 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int[] list = { 5, 1, 4, 2, 8 ,7};
+            int[] list = { 5, 1, 4, 2, 8, 7 };
 
-            SortADT.BubbleSort(list);
-            SortADT.Quicksort(list, 0, list.Length - 1);
+            QueuesADT queues = new QueuesADT(3);
+            QueuesADT.EnqueuesLinkedList(5);
+            
 
-            foreach (var item in list)
-            {
-                Console.Write(item+"\t");
-            }
-          
+
+
+
+            Console.WriteLine("Count " + QueuesADT.CountLinkedList());
+            
+
         }
 
     }

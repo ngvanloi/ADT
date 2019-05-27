@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.DataStructure
 {
-    public class Queues
+    public class QueuesADT
     {
         //first-in, first-out
         #region ArrayList
 
-        int[] Buf;
-        int FrontArray;
-        int RearArray;
-        int S;
-        public Queues(int size)
+        static int[] Buf;
+        static int FrontArray;
+        static int RearArray;
+        static int S;
+        public QueuesADT(int size)
         {
             Buf = new int[size];
             FrontArray = -1;
@@ -23,18 +23,19 @@ namespace ConsoleApplication1.DataStructure
             S = Buf.Length;
 
         }
-        void EnqueuesArray(int value)
+        public static void EnqueuesArray(int value)
         {
-            if (RearArray == -1)
-            {
-                FrontArray = RearArray = 0;
-                Buf[RearArray] = value;
-            }
-            else
-            {
-                if (((RearArray + 1) % S) == FrontArray)
+             if (((RearArray + 1) % S) == FrontArray)
                 {
                     Console.WriteLine("Overflow");
+                }
+            
+            else
+            {
+                if (RearArray == -1)
+                {
+                    FrontArray = RearArray = 0;
+                    Buf[RearArray] = value;
                 }
                 else
                 {
@@ -43,9 +44,9 @@ namespace ConsoleApplication1.DataStructure
                 }
             }
         }
-        string DequeuesArray()
+        public static string DequeuesArray()
         {
-            if (FrontArray == -1)
+            if (FrontArray == -1 )
             {
                 return "Underflow";
             }
@@ -53,15 +54,15 @@ namespace ConsoleApplication1.DataStructure
             {
                 var value = Buf[FrontArray];
                 FrontArray = (FrontArray + 1) % S;
-                return Buf[FrontArray].ToString();
+                return value.ToString();//sửa ở đây
             }
 
         }
-        void ClearArray()
+        public static void ClearArray()
         {
             FrontArray = RearArray = -1;
         }
-        int CountArray()
+        public static int CountArray()
         {
             if (FrontArray == -1)
             {
@@ -84,9 +85,9 @@ namespace ConsoleApplication1.DataStructure
 
         #region LinkerList
 
-        Node FrontLinkedList = null;
-        Node RearLinkedList = null;
-        void EnqueuesLinkedList(int value)
+        public static Node FrontLinkedList = null;
+        public static Node RearLinkedList = null;
+        public static void EnqueuesLinkedList(int value)
         {
             var n = new Node();
             if (RearLinkedList == null)
@@ -100,7 +101,7 @@ namespace ConsoleApplication1.DataStructure
             }
         }
 
-        string DequeuesLinkedList()
+        public static string DequeuesLinkedList()
         {
             if (FrontLinkedList == null)
             {
@@ -119,12 +120,12 @@ namespace ConsoleApplication1.DataStructure
             }
         }
 
-        void ClearLinkedList()
+        public static void ClearLinkedList()
         {
             FrontLinkedList = RearLinkedList = null;
         }
 
-        int CountLinkedList() // Xem lai
+        public static int CountLinkedList() // Xem lai
         {
             int length = 0;
             while (FrontLinkedList != null)
